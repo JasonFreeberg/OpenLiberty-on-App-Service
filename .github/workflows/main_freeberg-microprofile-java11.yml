@@ -28,7 +28,9 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: java-app
-        path: '${{ github.workspace }}/target/*.jar'
+        path: |
+          '${{ github.workspace }}/target/*.jar'
+          '${{ github.workspace }}/target/*.war'
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,4 +52,4 @@ jobs:
         app-name: 'freeberg-microprofile-java11'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_269a7da370824d329082cbacdcf0597c }}
-        package: '*.jar'
+        package: '.'
