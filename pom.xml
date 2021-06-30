@@ -9,8 +9,8 @@
   <properties> 
     <openliberty.maven.version>3.2</openliberty.maven.version>  
     <maven.compiler.target>11</maven.compiler.target>  
-    <failOnMissingWebXml>false</failOnMissingWebXml>  
     <maven.compiler.source>11</maven.compiler.source>  
+    <failOnMissingWebXml>false</failOnMissingWebXml>  
     <openliberty.version>[19.0.0.9,)</openliberty.version>  
     <final.name>OpenLiberty-Sample</final.name> 
   </properties>  
@@ -24,48 +24,12 @@
     </dependency> 
   </dependencies>  
   <build> 
-    <finalName>OpenLiberty-Sample</finalName>  
+    <finalName>app</finalName>  
     <plugins>
       <plugin>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-webapp-maven-plugin</artifactId>
-        <version>1.9.1</version>
-        <configuration>
-          <schemaVersion>V2</schemaVersion>
-          <resourceGroup>microprofile</resourceGroup>
-          <appName>OpenLiberty-Sample-1591587079557</appName>
-          <pricingTier>P1v2</pricingTier>
-          <region>japaneast</region>
-          <runtime>
-            <os>linux</os>
-            <javaVersion>java11</javaVersion>
-            <webContainer>java11</webContainer>
-          </runtime>
-          <appSettings>
-            <property>
-              <name>PORT</name>
-              <value>80</value>
-            </property>
-            <property>
-              <name>WEBSITES_PORT</name>
-              <value>80</value>
-            </property>
-            <property>
-              <name>WEBSITES_CONTAINER_START_TIME_LIMIT</name>
-              <value>600</value>
-            </property>
-          </appSettings>
-          <deployment>
-            <resources>
-              <resource>
-                <directory>${project.basedir}/target</directory>
-                <includes>
-                  <include>*.jar</include>
-                </includes>
-              </resource>
-            </resources>
-          </deployment>
-        </configuration>
+        <version>2.0.0</version>
       </plugin>
     </plugins>
   </build>  
@@ -108,7 +72,7 @@
           <plugin> 
             <groupId>com.microsoft.azure</groupId>  
             <artifactId>azure-webapp-maven-plugin</artifactId>  
-            <version>1.9.1</version> 
+            <version>2.0.0</version> 
           </plugin> 
         </plugins> 
       </build>  

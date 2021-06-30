@@ -12,7 +12,6 @@ This will create an executable jar file **OpenLiberty-Sample.jar** within the _t
 
     java -jar target/OpenLiberty-Sample.jar
 
-
 ### Liberty Dev Mode
 
 During development, you can use Liberty's development mode (dev mode) to code while observing and testing your changes on the fly.
@@ -20,8 +19,6 @@ With the dev mode, you can code along and watch the change reflected in the runn
 unit and integration tests are run on pressing Enter in the command terminal; you can attach a debugger to the running server at any time to step through your code.
 
     mvn liberty:dev
-
-
 
 To launch the test page, open your browser at the following URL
 
@@ -35,30 +32,14 @@ Also, a simple Hello world endpoint is created, have a look at the class **Hello
 
 More information on MicroProfile can be found [here](https://microprofile.io/)
 
-
-
-
-
-
-
-
 ### Metrics
 
 The Metrics exports _Telemetric_ data in a uniform way of system and custom resources. Specification [here](https://microprofile.io/project/eclipse/microprofile-metrics)
 
 The example class **MetricController** contains an example how you can measure the execution time of a request.  The index page also contains a link to the metric page (with all metric info)
 
-
-
-
-
 ### Open API
 
 Exposes the information about your endpoints in the format of the OpenAPI v3 specification. Specification [here](https://microprofile.io/project/eclipse/microprofile-open-api)
 
 The index page contains a link to the OpenAPI information of your endpoints.
-
-
-
-
-
